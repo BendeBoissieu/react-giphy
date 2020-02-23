@@ -3,7 +3,7 @@ import Gif from './gif.jsx';
 
 class GifList extends Component {
   renderList = () => {
-    return this.props.gifs.map(gif => <Gif id={gif.id} key={gif.id} />)
+    return this.props.gifs.map(gif => <Gif id={gif.id} key={gif.id} selectGif={this.props.selectGif}/>)
   }
   render() {
     return (
@@ -16,3 +16,11 @@ class GifList extends Component {
 
 export default GifList;
 
+// notation sans class
+// const GifList = (props) => {
+//   return (
+//     <div className="gif-list">
+//       {props.gifs.map(gif => <Gif id={gif.id} key={gif.id} selectGif={props.selectGif} />)}
+//     </div>
+//   );
+// };

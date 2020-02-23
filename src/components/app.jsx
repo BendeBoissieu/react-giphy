@@ -18,11 +18,15 @@ class App extends Component {
     this.search("Homer thinking");
   }
 
+  selectGif = (id) => {
+    this.setState({selectedGifId: id});
+  }
+
   search = (query) => {
     giphy('hZqI2I15ieKQIOKo17trbSfbgXDoYoDO').search({
       q: query,
       rating: 'g',
-      limit: 10
+      limit: 20
     }, (err, result) => {
       this.setState({gifs: result.data})
     });
@@ -43,7 +47,7 @@ class App extends Component {
         </div>
       </div>
       <div className = "right-scene">
-        <GifList gifs={this.state.gifs}/>
+        <GifList gifs={this.state.gifs} selectGif={this.selectGif}/>
       </div>
     </div>);
   }
