@@ -15,7 +15,7 @@ class App extends Component {
       selectedGifId: "xT5LMHxhOfscxPfIfm"
     }
 
-    this.search("Homer thinking");
+    //this.search("Homer thinking");
   }
 
   selectGif = (id) => {
@@ -33,12 +33,12 @@ class App extends Component {
   }
 
   render() {
-    const gifs = [
-      { id: "q1mHcB8wOCWf6"},
-      { id: "4KkSbPnZ5Skec"},
-      { id: "d7g2Wmve71MdUaKrqn"},
-      { id: "l2Je66zG6mAAZxgqI"}
-    ];
+    // const gifs = [
+    //   { id: "q1mHcB8wOCWf6"},
+    //   { id: "4KkSbPnZ5Skec"},
+    //   { id: "d7g2Wmve71MdUaKrqn"},
+    //   { id: "l2Je66zG6mAAZxgqI"}
+    // ];
     return(<div>
       <div className = "left-scene">
         <SearchBar searchfunction={this.search}/>
